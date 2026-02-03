@@ -48,7 +48,7 @@ public class LoginServlet extends HttpServlet {
 	            Class.forName("com.mysql.jdbc.Driver");
 	            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/enews", "root", " ");
 
-	            // Check user credentials
+	            // Check user's credentials
 	            String query = "SELECT * FROM users WHERE email=? AND password=?";
 	            PreparedStatement pst = con.prepareStatement(query);
 	            pst.setString(1, email);
